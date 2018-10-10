@@ -1,2 +1,5 @@
 <Live HTML Previewer>
 F1 -> Show side Preview
+
+<auto indent>
+Alt+Shift+F
