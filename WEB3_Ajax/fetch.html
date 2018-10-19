@@ -1,10 +1,20 @@
 <!doctype html>
 <html>
   <body>
-    <input type="button" value="fetch" onclick="
+    <article>
+
+    </article>
+    <input type="button" value="fetch_html" onclick="
       fetch('html').then(function(response){
         response.text().then(function(text){
-          alert(text);
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    ">
+    <input type="button" value="fetch_css" onclick="
+      fetch('css').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
         })
       })
     ">
