@@ -2,6 +2,12 @@
 <html>
   <body>
     aaa
-    <input type="button" value="fetch">
+    <input type="button" value="fetch" onclick="
+      fetch('css').then(function(response){
+        response.text().then(functino(text){
+          alert(text);
+        })
+      })
+    ">
   </body>
 </html>
