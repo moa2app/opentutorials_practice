@@ -22,18 +22,18 @@ article{
   margin: 0;
   padding: 20px;
 }
-#grid {
+#nav {
   display: grid;
   grid-template-columns: 150px 1fr;
 }
-#grid ol{
+#nav ol{
   padding-left:33px;
 }
-#grid #article {
+#nav #article {
   padding-left:25px;
 }
 @media(max-width:800px){
-  #grid {
+  #nav {
     display: block;
   }
   ol {
