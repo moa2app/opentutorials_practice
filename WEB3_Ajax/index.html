@@ -33,12 +33,15 @@
     }
     fetch('list').then(function(response){
       response.text().then(function(text){
-        //<li><a a href="#!ajax" onclick="fetchPage('css')">CSS</a></li>
         var items = text.split(',');
         var i=0;
+        var tags = '';
         while(i<items.length){
           var item = items[i];
-          console.log(item);
+          //<li><a a href="#!ajax" onclick="fetchPage('css')">CSS</a></li>
+          var tag = '<li><a href="#!'+item+'" onclick="">'+item+'</a></li>';
+          console.log(tag);
+          tags = tags + tag;
           i = i+1;
         }
         document.querySelector('#nav').innerHTML = text;
