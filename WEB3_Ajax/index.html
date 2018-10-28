@@ -33,6 +33,14 @@
     }
     fetch('list').then(function(response){
       response.text().then(function(text){
+        //<li><a a href="#!ajax" onclick="fetchPage('css')">CSS</a></li>
+        var items = text.split(',');
+        var i=0;
+        while(i<items.length){
+          var item = items[i];
+          console.log(item);
+          i = i+1;
+        }
         document.querySelector('#nav').innerHTML = text;
       })
     });
